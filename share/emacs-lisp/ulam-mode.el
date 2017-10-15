@@ -9,7 +9,8 @@
      map)
   "Keymap for `ulam-mode'.")
 
-(define-derived-mode ulam-mode java-mode "ulam"
+;;;###autoload
+(define-derived-mode ulam-mode java-mode "ulam-mode"
   "A mode to edit ulam source files."
 
   (c-lang-defconst c-other-decl-kwds
@@ -47,6 +48,7 @@
   (c-set-style "std2")
 )
 
+;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.ulam\\'" . ulam-mode))
 
-(provide 'ulam)
+(provide 'ulam-mode)
